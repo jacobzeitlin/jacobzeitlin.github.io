@@ -1,3 +1,1 @@
-# jacobzeitlin.github.io
 
-site
