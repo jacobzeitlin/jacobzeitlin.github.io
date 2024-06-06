@@ -6,12 +6,13 @@
     <title>Jacob Zeitlin</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
+            background-color: #ffffff;
             color: #333;
             display: flex;
             justify-content: center;
@@ -19,12 +20,12 @@
             height: 100vh;
         }
         .container {
-            background-color: white;
-            padding: 20px;
+            background-color: #f7f7f7;
+            padding: 40px;
             max-width: 600px;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         h1 {
             color: #c11d1d;
@@ -49,6 +50,28 @@
         a:hover {
             text-decoration: underline;
         }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #469dd7;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #357ab7;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .footer a {
+            color: #012169;
+            margin: 0 5px;
+        }
     </style>
 </head>
 <body>
@@ -57,6 +80,12 @@
         <h2>Medical Student & Aspiring Orthopaedic Surgeon</h2>
         <p>Welcome to my personal site. Currently a Research Fellow at Philadelphia Hand to Shoulder Center.</p>
         <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <a href="https://your-link.com" class="button">Learn More</a>
+        <div class="footer">
+            <p>Connect with me:</p>
+            <a href="https://twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+        </div>
     </div>
 </body>
 </html>
