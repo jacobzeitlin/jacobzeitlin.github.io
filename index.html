@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacob Zeitlin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -15,9 +15,26 @@
             background-color: #ffffff;
             color: #333;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #6B8E23;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         .container {
             background-color: #f7f7f7;
@@ -25,16 +42,23 @@
             max-width: 600px;
             text-align: center;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         h1 {
             color: #c11d1d;
             font-size: 2.5em;
+            font-weight: 700;
+            letter-spacing: 1px;
             margin: 0.5em 0;
         }
         h2 {
             color: #012169;
             font-size: 1.5em;
+            font-weight: 400;
+            letter-spacing: 0.5px;
             margin: 0.5em 0;
         }
         p {
@@ -58,34 +82,37 @@
             color: white;
             border-radius: 5px;
             text-decoration: none;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
         .button:hover {
-            background-color: #357ab7;
+            background-color: #357ab8;
         }
-        .footer {
+        footer {
             margin-top: 20px;
-            font-size: 0.9em;
-            color: #666;
-        }
-        .footer a {
-            color: #012169;
-            margin: 0 5px;
+            font-size: 0.8em;
         }
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <div class="container">
         <h1>Jacob Zeitlin</h1>
         <h2>Medical Student & Aspiring Orthopaedic Surgeon</h2>
         <p>Welcome to my personal site. Currently a Research Fellow at Philadelphia Hand to Shoulder Center.</p>
         <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
         <a href="https://your-link.com" class="button">Learn More</a>
-        <div class="footer">
-            <p>Connect with me:</p>
-            <a href="https://twitter.com/yourprofile"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com/in/yourprofile"><i class="fab fa-linkedin"></i></a>
+        <div>
+            <a href="https://twitter.com/yourprofile" class="fab fa-twitter" style="margin: 10px;"></a>
+            <a href="https://linkedin.com/in/yourprofile" class="fab fa-linkedin" style="margin: 10px;"></a>
         </div>
     </div>
+    <footer>
+        <p>&copy; 2024 Jacob Zeitlin. All rights reserved.</p>
+    </footer>
 </body>
 </html>
