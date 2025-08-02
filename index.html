@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Zeitlin</title>
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #ffffff;
-            font-family: 'Roboto', sans-serif;
-        }
-        h1 {
-            color: #c11d1d;
-            font-size: 5em;
-            font-weight: bold;
-            margin: 0;
-        }
-    </style>
+  <meta charset="UTF‑8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacob Zeitlin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f5f5;
+      color: #333333;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    h1 {
+      color: #c11ddd;
+      font-size: 4em;
+      margin-bottom: 0.3em;
+    }
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      margin-bottom: 2em;
+    }
+    .button-group {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+      margin-top: 1.5em;
+    }
+    .button {
+      background-color: #c11ddd;
+      color: #ffffff;
+      padding: 0.75em 1.5em;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #a00bb3;
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
     <h1>Jacob Zeitlin</h1>
+    <p>
+      Orthopaedic surgery resident at Hackensack University. Passionate about orthopaedic research,
+      machine learning and advancing patient care through technology. Duke and Weill Cornell alumnus.
+    </p>
+    <div class="button-group">
+      <a class="button" href="mailto:jacobzeitlin@example.com">Contact Me</a>
+      <a class="button" href="https://github.com/jacobzeitlin/anki-addons" target="_blank">Anki Add‑ons</a>
+      <a class="button" href="https://github.com/jacobzeitlin" target="_blank">GitHub Profile</a>
+    </div>
+  </div>
 </body>
 </html>
