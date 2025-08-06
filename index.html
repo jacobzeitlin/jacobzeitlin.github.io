@@ -23,7 +23,9 @@
         }
 
         .circle-button {
-            display: inline-block;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             width: 32px;
             height: 32px;
             border-radius: 50%;
@@ -31,13 +33,21 @@
             margin: 0 16px;
             text-decoration: none;
         }
+
+        .circle-button img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+        }
     </style>
 </head>
 
 <body>
     <h1>Jacob Zeitlin, MD</h1>
     <div>
-        <a class="circle-button" href="https://www.google.com"></a>
+        <a class="circle-button" href="https://www.google.com">
+            <img src="assets/researchgatelogo.png" alt="ResearchGate logo">
+        </a>
         <a class="circle-button" href="https://www.google.com"></a>
         <a class="circle-button" href="https://www.google.com"></a>
     </div>
