@@ -42,17 +42,25 @@
       vertical-align: top;
     }
 
-    /* ResearchGate & ORCID use 84% of container */
-    .circle-button img {
+    /* ResearchGate uses 84% of container */
+    .circle-button img[alt="ResearchGate logo"] {
       width: 84%;
       height: 84%;
       object-fit: contain;
     }
 
-    /* LinkedIn icon stays at 66% */
+    /* ORCID uses 80% of container */
+    .circle-button img[alt="ORCID logo"] {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
+
+    /* LinkedIn uses 62% of container */
     .circle-button.linkedin img {
-      width: 66%;
-      height: 66%;
+      width: 62%;
+      height: 62%;
+      object-fit: contain;
     }
   </style>
 </head>
