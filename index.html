@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Zeitlin</title>
+    <title>JZMD</title>
     <style>
         body {
             margin: 0;
@@ -30,26 +30,23 @@
             height: 80px;
             border-radius: 50%;
             background-color: #000042;
-            margin: 0 16px;
+            margin: 0 40px;
             text-decoration: none;
             vertical-align: top;
         }
 
-        /* ResearchGate uses 84% of container */
         .circle-button img[alt="ResearchGate logo"] {
           width: 84%;
           height: 84%;
           object-fit: contain;
         }
     
-        /* ORCID uses 80% of container */
         .circle-button img[alt="ORCID logo"] {
           width: 80%;
           height: 80%;
           object-fit: contain;
         }
     
-        /* LinkedIn uses 62% of container */
         .circle-button.linkedin img {
           width: 62%;
           height: 62%;
@@ -67,7 +64,7 @@
             <img src="assets/orcid.png" alt="ORCID logo">
         </a>
         <a class="circle-button" href="https://www.linkedin.com/in/jacobzeitlin">
-            <img src="assets/linkedin.png" alt="LinkedIn logo" style="width:66%;height:66%;">
+            <img src="assets/linkedin.png" alt="LinkedIn logo">
         </a>
     </div>
     <script>
@@ -76,8 +73,7 @@
             el.style.fontSize = '';
             const maxWidth = document.body.clientWidth - 20;
             let fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-            const minFontSize = 18; // px, adjust as needed
-            // Reduce font size until it fits, or until minimum reached
+            const minFontSize = 18;
             while ((el.scrollWidth > maxWidth || el.offsetWidth > maxWidth) && fontSize > minFontSize) {
                 fontSize -= 1;
                 el.style.fontSize = fontSize + 'px';
