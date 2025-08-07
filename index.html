@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -61,25 +60,16 @@
             const el = document.getElementById('name');
             el.style.fontSize = '';
             const maxWidth = document.body.clientWidth - 20;
-            console.log('maxWidth:', maxWidth);
-        
-            const currentScrollWidth = el.scrollWidth;
-            const currentOffsetWidth = el.offsetWidth;
-            console.log('el.scrollWidth:', currentScrollWidth);
-            console.log('el.offsetWidth:', currentOffsetWidth);
-        
-            if (currentScrollWidth > maxWidth) {
-                const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-                const ratio = maxWidth / currentScrollWidth;
-                el.style.fontSize = (fontSize * ratio) + 'px';
-                console.log('adjusted el.offsetWidth:', el.offsetWidth);
+            let fontSize = parseFloat(window.getComputedStyle(el).fontSize);
+            const minFontSize = 18; // px, adjust as needed
+            // Reduce font size until it fits, or until minimum reached
+            while ((el.scrollWidth > maxWidth || el.offsetWidth > maxWidth) && fontSize > minFontSize) {
+                fontSize -= 1;
+                el.style.fontSize = fontSize + 'px';
             }
-            console.log('el.style.fontSize:', el.style.fontSize);
         }
         window.addEventListener('load', adjustNameFont);
         window.addEventListener('resize', adjustNameFont);
     </script>
 </body>
-
 </html>
-
