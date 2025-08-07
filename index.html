@@ -64,7 +64,7 @@
             if (currentWidth > maxWidth) {
                 const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
                 const ratio = maxWidth / currentWidth;
-                el.style.fontSize = (fontSize * ratio) + 'px';
+                el.style.fontSize = (fontSize * ratio * 0.6) + 'px';
             }
         }
         window.addEventListener('load', adjustNameFont);
