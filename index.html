@@ -61,11 +61,15 @@
             el.style.fontSize = '';
             const maxWidth = document.body.clientWidth - 20;
             console.log('maxWidth:', maxWidth);
-            const currentWidth = el.scrollWidth;
-            console.log('currentWidth:', currentWidth);
-            if (currentWidth > maxWidth) {
+        
+            const currentScrollWidth = el.scrollWidth;
+            const currentOffsetWidth = el.offsetWidth;
+            console.log('el.scrollWidth:', currentScrollWidth);
+            console.log('el.offsetWidth:', currentOffsetWidth);
+        
+            if (currentScrollWidth > maxWidth) {
                 const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-                const ratio = maxWidth / currentWidth;
+                const ratio = maxWidth / currentScrollWidth;
                 el.style.fontSize = (fontSize * ratio * 0.6) + 'px';
             }
             console.log('el.style.fontSize:', el.style.fontSize);
