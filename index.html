@@ -35,10 +35,25 @@
             vertical-align: top;
         }
 
-        .circle-button img {
-            width: 84%;
-            height: 84%;
-            object-fit: contain;
+        /* ResearchGate uses 84% of container */
+        .circle-button img[alt="ResearchGate logo"] {
+          width: 84%;
+          height: 84%;
+          object-fit: contain;
+        }
+    
+        /* ORCID uses 80% of container */
+        .circle-button img[alt="ORCID logo"] {
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+        }
+    
+        /* LinkedIn uses 62% of container */
+        .circle-button.linkedin img {
+          width: 62%;
+          height: 62%;
+          object-fit: contain;
         }
     </style>
 </head>
