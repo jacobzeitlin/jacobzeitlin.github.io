@@ -70,7 +70,8 @@
             if (currentScrollWidth > maxWidth) {
                 const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
                 const ratio = maxWidth / currentScrollWidth;
-                el.style.fontSize = (fontSize * ratio * 0.6) + 'px';
+                el.style.fontSize = (fontSize * ratio) + 'px';
+                console.log('adjusted el.offsetWidth:', el.offsetWidth);
             }
             console.log('el.style.fontSize:', el.style.fontSize);
         }
