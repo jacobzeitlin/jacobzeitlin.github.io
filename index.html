@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Zeitlin</title>
-    <style>
-        body {
-            margin: 0;
-            text-align: center;
-            min-height: 60vh;
-            background-color: #ffffff;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-        }
-
-        h1 {
-            color: #000042;
-            font-size: 4em;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1em;
-            margin-bottom: 2em;
-        }
-
-        .circle-button {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #000042;
-            margin: 0 16px;
-            text-decoration: none;
-            vertical-align: top;
-        }
-
-        .circle-button img {
-            width: 84%;
-            height: 84%;
-            object-fit: contain;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jacob Zeitlin, MD</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --primary-color: #000042;
+      --button-size: 80px;
+      --font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --heading-font-size: 4rem;
+      --heading-font-size-sm: 2.5rem;
+      --spacing: 1em;
+    }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-color);
+      font-family: var(--font-family);
+      color: var(--primary-color);
+      text-align: center;
+      padding: var(--spacing);
+    }
+    h1 {
+      font-size: var(--heading-font-size);
+      margin: var(--spacing) 0;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: var(--heading-font-size-sm);
+      }
+    }
+    .social-links {
+      display: flex;
+      gap: var(--spacing);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: var(--spacing);
+    }
+    .social-links a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: var(--button-size);
+      height: var(--button-size);
+      border-radius: 50%;
+      background-color: var(--primary-color);
+      text-decoration: none;
+    }
+    .social-links img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      display: block;
+    }
+    .social-links a:focus {
+      outline: 2px dashed #FFD700;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
 <body>
-    <h1 id="name">Jacob Zeitlin, MD</h1>
-    <div>
-        <a class="circle-button" href="https://www.researchgate.net/profile/Jacob-Zeitlin">
-            <img src="assets/researchgate.png" alt="ResearchGate logo">
-        </a>
-        <a class="circle-button" href="https://orcid.org/0000-0002-6962-5100">
-            <img src="assets/orcid.png" alt="ORCID logo">
-        </a>
-        <a class="circle-button" href="https://www.linkedin.com/in/jacobzeitlin">
-            <img src="assets/linkedin.png" alt="LinkedIn logo" style="width:66%;height:66%;">
-        </a>
+  <main>
+    <h1>Jacob Zeitlin, MD</h1>
+    <div class="social-links" aria-label="Social links">
+      <a href="https://www.researchgate.net/profile/Jacob-Zeitlin" aria-label="ResearchGate">
+        <img src="assets/researchgate.png" alt="ResearchGate logo">
+      </a>
+      <a href="https://orcid.org/0000-0002-6962-5100" aria-label="ORCID">
+        <img src="assets/orcid.png" alt="ORCID logo">
+      </a>
+      <a href="https://www.linkedin.com/in/jacobzeitlin" aria-label="LinkedIn">
+        <img src="assets/linkedin.png" alt="LinkedIn logo">
+      </a>
     </div>
-    <script>
-        function adjustNameFont() {
-            const el = document.getElementById('name');
-            el.style.fontSize = '';
-            const maxWidth = document.body.clientWidth - 20;
-            let fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-            const minFontSize = 18; // px, adjust as needed
-            // Reduce font size until it fits, or until minimum reached
-            while ((el.scrollWidth > maxWidth || el.offsetWidth > maxWidth) && fontSize > minFontSize) {
-                fontSize -= 1;
-                el.style.fontSize = fontSize + 'px';
-            }
-        }
-        window.addEventListener('load', adjustNameFont);
-        window.addEventListener('resize', adjustNameFont);
-    </script>
+  </main>
 </body>
 </html>
