@@ -42,9 +42,8 @@
         }
     </style>
 </head>
-
 <body>
-    <h1>Jacob Zeitlin, MD</h1>
+    <h1 id="name">Jacob Zeitlin, MD</h1>
     <div>
         <a class="circle-button" href="https://www.researchgate.net/profile/Jacob-Zeitlin">
             <img src="assets/researchgate.png" alt="ResearchGate logo">
@@ -56,6 +55,22 @@
             <img src="assets/linkedin.png" alt="LinkedIn logo" style="width:66%;height:66%;">
         </a>
     </div>
+    <script>
+        function adjustNameFont() {
+            const el = document.getElementById('name');
+            el.style.fontSize = '';
+            const maxWidth = document.body.clientWidth - 20;
+            const currentWidth = el.scrollWidth;
+            if (currentWidth > maxWidth) {
+                const fontSize = parseFloat(window.getComputedStyle(el).fontSize);
+                const ratio = maxWidth / currentWidth;
+                el.style.fontSize = (fontSize * ratio) + 'px';
+            }
+        }
+        window.addEventListener('load', adjustNameFont);
+        window.addEventListener('resize', adjustNameFont);
+    </script>
 </body>
 
 </html>
+
