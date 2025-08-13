@@ -1,0 +1,21 @@
+/* Typography and layout tweaks */
+.home .page-heading, .post-title, h1, h2, h3 { color:#000042; }
+
+/* Circle buttons */
+.circle-button {
+  display:inline-flex; justify-content:center; align-items:center;
+  width:80px; height:80px; border-radius:50%;
+  background:#000042; margin:0 min(24px,4vw); vertical-align:top;
+}
+.circle-button img[alt="ResearchGate logo"] { width:84%; height:84%; object-fit:contain; }
+.circle-button img[alt="ORCID logo"]        { width:80%; height:80%; object-fit:contain; }
+.circle-button.linkedin img                  { width:62%; height:62%; object-fit:contain; }
+
+/* Center links block and add spacing */
+.profile-links { text-align:center; margin:2rem 0 3rem; /* rem = root element font size units (2 = 2 * root, 3 = 3 * root) */ }
+
+/* Responsive title sizing */
+#name, .site-title, .page-title { font-weight:700; }
+@media (max-width: 480px) {
+  .home .page-heading, .page-title { font-size:1.8rem; }
+}

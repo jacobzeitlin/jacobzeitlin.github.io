@@ -1,88 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JZMD</title>
-    <style>
-        body {
-            margin: 0;
-            text-align: center;
-            min-height: 60vh;
-            background-color: #ffffff;
-            font-family: 'Helvetica', 'Arial', sans-serif;
-        }
+---
+layout: blank
+title: "Jacob Zeitlin, MD"
+---
 
-        h1 {
-            color: #000042;
-            font-size: 4em;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 1em;
-            margin-bottom: 2em;
-        }
-
-        .circle-button {
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: #000042;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            margin-left: min(24px, 4vw);
-            margin-right: min(24px, 4vw);
-            vertical-align: top;
-        }
-
-        .circle-button img[alt="ResearchGate logo"] {
-          width: 84%;
-          height: 84%;
-          object-fit: contain;
-        }
-    
-        .circle-button img[alt="ORCID logo"] {
-          width: 80%;
-          height: 80%;
-          object-fit: contain;
-        }
-    
-        .circle-button.linkedin img {
-          width: 62%;
-          height: 62%;
-          object-fit: contain;
-        }
-    </style>
-</head>
-<body>
-    <h1 id="name">Jacob Zeitlin, MD</h1>
-    <div>
-        <a class="circle-button" href="https://www.researchgate.net/profile/Jacob-Zeitlin">
-            <img src="assets/researchgate.png" alt="ResearchGate logo">
-        </a>
-        <a class="circle-button" href="https://orcid.org/0000-0002-6962-5100">
-            <img src="assets/orcid.png" alt="ORCID logo">
-        </a>
-        <a class="circle-button linkedin" href="https://www.linkedin.com/in/jacobzeitlin">
-            <img src="assets/linkedin.png" alt="LinkedIn logo">
-        </a>
-    </div>
-    <script>
-        function adjustNameFont() {
-            const el = document.getElementById('name');
-            el.style.fontSize = '';
-            const maxWidth = document.body.clientWidth - 20;
-            let fontSize = parseFloat(window.getComputedStyle(el).fontSize);
-            const minFontSize = 18;
-            while ((el.scrollWidth > maxWidth || el.offsetWidth > maxWidth) && fontSize > minFontSize) {
-                fontSize -= 1;
-                el.style.fontSize = fontSize + 'px';
-            }
-        }
-        window.addEventListener('load', adjustNameFont);
-        window.addEventListener('resize', adjustNameFont);
-    </script>
-</body>
-</html>
+<div class="profile-links">
+  <a class="circle-button" href="https://www.researchgate.net/profile/Jacob-Zeitlin">
+    <img src="{{ '/assets/img/researchgate.png' | relative_url }}" alt="ResearchGate logo">
+  </a>
+  <a class="circle-button" href="https://orcid.org/0000-0002-6962-5100">
+    <img src="{{ '/assets/img/orcid.png' | relative_url }}" alt="ORCID logo">
+  </a>
+  <a class="circle-button linkedin" href="https://www.linkedin.com/in/jacobzeitlin">
+    <img src="{{ '/assets/img/linkedin.png' | relative_url }}" alt="LinkedIn">
+  </a>
+</div>

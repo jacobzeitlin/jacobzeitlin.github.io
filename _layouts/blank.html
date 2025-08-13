@@ -1,0 +1,17 @@
+---
+layout: null
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}{% comment %}from minima if present{% endcomment %}
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <h1 id="name">{{ page.title | default: site.title }}</h1>
+    {% comment %} your old HTML renders exactly as before {% endcomment %}
+    {{ content }}
+  </body>
+</html>

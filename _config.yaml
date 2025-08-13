@@ -1,0 +1,22 @@
+title: JZMD
+description: ""
+url: https://jacobzeitlin.github.io
+theme: minima  # simple, supported on GitHub Pages
+
+# Site-wide settings
+markdown: kramdown
+permalink: pretty
+
+# Build settings
+exclude:
+  - README.md
+  - node_modules
+
+include:
+  - _includes/head-custom.html
+
+minima:
+  skin: classic
+  # minima uses /assets/main.css by default; keeping that path:
+sass:
+  sass_dir: assets/css
