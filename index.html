@@ -1,29 +1,41 @@
----
-layout: blank
-title: "Jacob Zeitlin, MD"
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jacob Zeitlin, MD</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-<div class="profile-links">
-  <a class="circle-button" href="https://www.researchgate.net/profile/Jacob-Zeitlin">
-    <img src="{{ '/assets/img/researchgate.png' | relative_url }}" alt="ResearchGate logo">
-  </a>
-  <a class="circle-button" href="https://orcid.org/0000-0002-6962-5100">
-    <img src="{{ '/assets/img/orcid.png' | relative_url }}" alt="ORCID logo">
-  </a>
-  <a class="circle-button linkedin" href="https://www.linkedin.com/in/jacobzeitlin">
-    <img src="{{ '/assets/img/linkedin.png' | relative_url }}" alt="LinkedIn">
-  </a>
-</div>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+      }
 
-<!--
-  Added a simple text link below the social icons.
-  This link is underlined to appear like a traditional hyperlink and directs users to the
-  Wordpath sub‑site. The surrounding div centers the link on the page and provides some
-  spacing from the icons above. The `href` points to the Wordpath subdomain, which is
-  expected to host its own GitHub Pages site. When you deploy this update, ensure that
-  the corresponding repository (`wordpath.jacobzeitlin.com`) exists with a suitable
-  index.html so the link works as intended.
--->
-<div style="text-align:center; margin-top: 2rem;">
-  <a href="https://wordpath.jacobzeitlin.com" style="text-decoration: underline; font-size: 1.25rem; color: inherit;">Wordpath</a>
-</div>
+      body {
+        display: grid;
+        min-height: 100vh;
+        min-height: 100svh;
+        place-items: center;
+        padding: 1.5rem;
+        background: #ffffff;
+        color: #111111;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2.25rem, 7vw, 5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Jacob Zeitlin, MD</h1>
+  </body>
+</html>
